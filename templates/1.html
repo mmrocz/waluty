@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <title>Currencies</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> {% endblock %}
+</head>
+
+<body>
+    <div>
+        <form action="" method="post">
+            <label for="waluty">Wybierz walutę: </label>
+            <select name="currency" id="waluty">
+                <option value="USD">dolar amerykański</option>
+                <option value="AUD">dolar australijski</option>
+                <option value="CAD">dolar kanadyjski</option>
+                <option value="EUR">euro</option>
+                <option value="HUF">forint (Węgry)</option>
+                <option value="CHF">frank szwajcarski</option>
+                <option value="GBP">funt szterling</option>
+                <option value="JPY">jen (Japonia)</option>
+                <option value="CZK">korona czeska</option>
+                <option value="DKK">korona duńska</option>
+                <option value="NOK">korona norweska</option>
+                <option value="SEK">korona szwedzka</option>
+                <option value="XDR">SDR (MFW)</option>
+            </select>
+            <br>
+            <label>Podaj ilość:</label><br><br>
+            <input type="number" name="amount" /><br><br>
+            <button type="submit">Przelicz</button>
+        </form>
+    </div>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <br>
+</body>
+
+</html>
