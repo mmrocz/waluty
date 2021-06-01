@@ -1,0 +1,15 @@
+h1 {
+  color: black;
+  font: strong;
+  background: gray;
+}
+h2 {
+  color: blue;
+  font: strong;
+  font-size: 32px;
+}
+p {
+   font-size: 22px}
+
+ul {
+   font-size: 22px}
